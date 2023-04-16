@@ -10,6 +10,7 @@ require("mason-lspconfig").setup {
     "tailwindcss",
     "taplo",
     "tsserver",
+    "volar",
     "yamlls"
   }
 }
@@ -73,6 +74,11 @@ lspconfig.taplo.setup {
 
 -- TypeScript
 lspconfig.tsserver.setup {
+  capabilities = capabilities,
+}
+
+-- Vue
+lspconfig.volar.setup {
   capabilities = capabilities,
 }
 

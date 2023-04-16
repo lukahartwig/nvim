@@ -21,11 +21,13 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-path'
+  use 'jose-elias-alvarez/null-ls.nvim'
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
   use 'simrat39/rust-tools.nvim'
   use 'terrortylor/nvim-comment'
-  use "windwp/nvim-autopairs"
+  use 'windwp/nvim-autopairs'
+  use 'folke/zen-mode.nvim'
   use 'folke/tokyonight.nvim'
   use 'lukahartwig/pnpm.nvim'
   use {
