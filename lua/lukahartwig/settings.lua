@@ -2,6 +2,9 @@
 vim.o.hlsearch = false
 vim.o.incsearch = true
 
+-- Highlight current line
+vim.o.cursorline = true
+
 -- Set terminal colors
 vim.o.termguicolors = true
 
@@ -16,6 +19,9 @@ vim.o.mouse = 'a'
 vim.o.undofile = true
 vim.o.swapfile = false
 vim.o.backup = false
+
+-- Sync with system clipboard
+vim.o.clipboard = "unnamedplus"
 
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
@@ -44,4 +50,4 @@ vim.o.signcolumn = "yes"
 vim.o.laststatus = 3
 
 -- Set colorscheme
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd.colorscheme "catppuccin"

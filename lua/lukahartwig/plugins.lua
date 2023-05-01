@@ -12,29 +12,22 @@ end
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/mason.nvim'
-  use 'williamboman/mason-lspconfig.nvim'
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'folke/zen-mode.nvim'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-path'
-  use 'lervag/vimtex'
   use 'jose-elias-alvarez/null-ls.nvim'
-  use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
-  use 'simrat39/rust-tools.nvim'
-  use 'terrortylor/nvim-comment'
-  use 'windwp/nvim-autopairs'
-  use 'folke/zen-mode.nvim'
-  use 'folke/tokyonight.nvim'
+  use 'lervag/vimtex'
   use 'lukahartwig/pnpm.nvim'
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+  use 'kyazdani42/nvim-web-devicons'
+  use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lualine/lualine.nvim'
+  use 'nvim-telescope/telescope.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
@@ -42,12 +35,13 @@ return require('packer').startup(function(use)
       ts_update()
     end,
   }
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = {
-      { 'nvim-lua/plenary.nvim' },
-    }
-  }
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'simrat39/rust-tools.nvim'
+  use 'terrortylor/nvim-comment'
+  use 'wbthomason/packer.nvim'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use 'windwp/nvim-autopairs'
 
   if packer_bootstrap then
     require('packer').sync()
